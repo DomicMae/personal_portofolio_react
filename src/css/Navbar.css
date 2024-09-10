@@ -1,0 +1,35 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Menempatkan item di tengah */
+  background-color: #333;
+}
+
+li {
+  display: flex;
+  justify-content: flex-start; /* Membuat item dimulai dari kiri */
+  align-items: center; /* Vertikal rata tengah */
+  margin: 0 10px; /* Memberi jarak antar item */
+}
+
+img {
+  width: 64px;
+  height: 64px;
+}
+
+li a {
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Vertikal rata tengah */
+  justify-content: center; /* Horizontal rata tengah */
+  color: white;
+  text-align: center;
+  padding: 0px;
+  text-decoration: none;
+  height: 100%; /* Pastikan elemen a mengisi penuh elemen li */
+}
+
+li a:hover {
+  background-color: #111;
+}
