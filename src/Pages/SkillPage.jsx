@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import Navbar from "../Components/Navbar";
-import BodyAboutMePage from "../Components/BodyAboutMePage";
+import BodySkill from "../Components/BodySkill";
 
-export default function AboutPage(props) {
+export default function SkillPage(props) {
   useEffect(() => {
     console.log(props.auth.user); // This will log the user object
   }, [props.auth.user]); // Run the effect when props.auth.user changes
@@ -12,7 +12,7 @@ export default function AboutPage(props) {
       <main className="mt-24">
         {" "}
         {/* Tambahkan margin-top */}
-        <BodyAboutMePage />
+        <BodySkill />
       </main>
     </div>
   );

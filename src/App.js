@@ -3,6 +3,7 @@ import "./App.css";
 import React from "react";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
+import SkillPage from "./Pages/SkillPage";
 
 function App() {
   return (
@@ -12,7 +13,14 @@ function App() {
           path="/"
           element={<HomePage auth={{ user: { name: "Test User" } }} />}
         />
-        <Route path="/about" element={<AboutPage />} />{" "}
+        <Route
+          path="/about"
+          element={<AboutPage auth={{ user: { name: "Test User" } }} />}
+        />
+        <Route
+          path="/skill"
+          element={<SkillPage auth={{ user: { name: "Test User" } }} />}
+        />
         {/* Tambahkan rute baru */}
       </Routes>
     </Router>
