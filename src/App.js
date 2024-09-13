@@ -4,6 +4,7 @@ import React from "react";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
 import SkillPage from "./Pages/SkillPage";
+import ProjectPage from "./Pages/ProjectPage";
 
 function App() {
   return (
@@ -20,6 +21,14 @@ function App() {
         <Route
           path="/skill"
           element={<SkillPage auth={{ user: { name: "Test User" } }} />}
+        />
+        <Route
+          path="/project"
+          element={<ProjectPage auth={{ user: { name: "Test User" } }} />}
+        />
+        <Route
+          path="/contact"
+          element={<ProjectPage auth={{ user: { name: "Test User" } }} />}
         />
         {/* Tambahkan rute baru */}
       </Routes>

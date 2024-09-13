@@ -2,7 +2,7 @@ import "../input.css";
 
 const BodySkill = ({ user }) => {
   return (
-    <div className="text-black">
+    <div className="text-black pb-20">
       {" "}
       {/* Semua teks di dalam div ini akan berwarna hitam */}
       <div className="flex items-center justify-center space-x-2 pb-8">
@@ -15,13 +15,10 @@ const BodySkill = ({ user }) => {
       </div>
       <div className="flex items-center justify-center space-x-2 pb-8">
         <h1 className="text-2xl font-bold tracking-tight sm:text-2xl text-white">
-          Programming
-        </h1>
-        <h1 className="text-2xl font-bold tracking-tight sm:text-2xl text-white">
-          Language
+          Skill
         </h1>
       </div>
-      <div className="items-center justify-center grid grid-cols-5 ">
+      <div className="items-center justify-center grid grid-cols-4 ">
         <div className="col-span-1 flex flex-col items-center justify-center ">
           <img src="php.png" alt="" className="rounded-md w-82 h-82 pt-6" />
           <p className="font-medium text-custom-orange text-xl text-center pt-6">
@@ -46,23 +43,18 @@ const BodySkill = ({ user }) => {
             CSS
           </p>
         </div>
+      </div>
+      <div className="items-center justify-center grid grid-cols-4">
         <div className="col-span-1 flex flex-col items-center justify-center">
           <img
             src="sql.png"
             alt=""
-            className="rounded-md w-82 h-82 pt-3 pb-3"
+            className="rounded-md w-82 h-82 pt-6 pb-4"
           />
-          <p className="font-medium text-custom-orange text-xl text-center pt-3">
+          <p className="font-medium text-custom-orange text-xl text-center pt-4">
             SQL
           </p>
         </div>
-      </div>
-      <div className="flex items-center justify-center space-x-2 pt-8 pb-8">
-        <h1 className="text-2xl font-bold tracking-tight sm:text-2xl text-white">
-          Framework
-        </h1>
-      </div>
-      <div className="items-center justify-center grid grid-cols-3 pl-24 pr-24">
         <div className="col-span-1 flex flex-col items-center justify-center ">
           <img src="react.png" alt="" className="rounded-md w-20 h-24 pt-4" />
           <p className="font-medium text-custom-orange text-xl text-center pt-8">

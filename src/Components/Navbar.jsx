@@ -6,6 +6,8 @@ const Navbar = () => {
   const location = useLocation();
   const [isAboutMeVisible, setIsAboutMeVisible] = useState(false);
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
+  const [isProjectVisible, setIsProjectVisible] = useState(false);
+  const [isContactVisible, setIsContactVisible] = useState(false);
 
   useEffect(() => {
     // Create an IntersectionObserver to detect when #about-me and #skills are visible
@@ -18,6 +20,12 @@ const Navbar = () => {
           if (entry.target.id === "skills") {
             setIsSkillsVisible(entry.isIntersecting);
           }
+          if (entry.target.id === "project") {
+            setIsProjectVisible(entry.isIntersecting);
+          }
+          if (entry.target.id === "contact") {
+            setIsContactVisible(entry.isIntersecting);
+          }
         });
       },
       {
@@ -29,12 +37,20 @@ const Navbar = () => {
     // Target the sections with id="about-me" and id="skills"
     const aboutMeSection = document.getElementById("about-me");
     const skillsSection = document.getElementById("skills");
+    const projectSection = document.getElementById("project");
+    const contactSection = document.getElementById("contact");
 
     if (aboutMeSection) {
       observer.observe(aboutMeSection);
     }
     if (skillsSection) {
       observer.observe(skillsSection);
+    }
+    if (projectSection) {
+      observer.observe(projectSection);
+    }
+    if (contactSection) {
+      observer.observe(contactSection);
     }
 
     return () => {
@@ -44,6 +60,12 @@ const Navbar = () => {
       }
       if (skillsSection) {
         observer.unobserve(skillsSection);
+      }
+      if (projectSection) {
+        observer.unobserve(projectSection);
+      }
+      if (contactSection) {
+        observer.unobserve(contactSection);
       }
     };
   }, []);
@@ -86,20 +108,24 @@ const Navbar = () => {
               </button>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold"
+              <button
+                onClick={() => handleScrollTo("project")}
+                className={`block py-2 px-3 md:p-0 font-bold ${
+                  isProjectVisible ? "text-custom-blue" : "text-white"
+                }`}
               >
                 Project
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-bold"
+              <button
+                onClick={() => handleScrollTo("contact")}
+                className={`block py-2 px-3 md:p-0 font-bold ${
+                  isContactVisible ? "text-custom-blue" : "text-white"
+                }`}
               >
                 Contact
-              </a>
+              </button>
             </li>
           </ul>
         </div>

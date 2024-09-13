@@ -3,6 +3,8 @@ import BodyHomePage from "../Components/BodyHomePage";
 import Navbar from "../Components/Navbar";
 import BodySkill from "../Components/BodySkill";
 import BodyAboutMePage from "../Components/BodyAboutMePage";
+import BodyProject from "../Components/BodyProject";
+import BodyContactPage from "../Components/BodyContactPage";
 
 export default function HomePage(props) {
   useEffect(() => {
@@ -26,6 +28,16 @@ export default function HomePage(props) {
         {/* Section BodySkill */}
         <section id="skills" className="py-10">
           <BodySkill />
+        </section>
+
+        {/* Section BodySkill */}
+        <section id="project" className="py-10">
+          <BodyProject />
+        </section>
+
+        {/* Section BodyProject */}
+        <section id="contact" className="py-10">
+          <BodyContactPage />
         </section>
       </main>
     </div>
