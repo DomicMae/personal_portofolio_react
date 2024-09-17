@@ -76,11 +76,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar bg-white dark:bg-custom-red fixed w-full top-0 start-0">
+    <nav className="navbar bg-white dark:bg-custom-red fixed w-full top-0 start-0 z-20">
       <div className="grid grid-cols-3 items-center justify-between mx-auto pr-6 pl-6">
         <a href="/" className="flex items-center col-span-1">
           <img src="/logo.png" alt="" />
-          <span className="text-2xl font-semibold text-white">ARDON</span>
+          <span className="text-2xl font-medium text-white font-redhat">
+            ARDON
+          </span>
         </a>
         <div className="flex items-center justify-center col-span-1">
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-custom-red dark:border-gray-700">

@@ -18,16 +18,17 @@ const BodySkill = ({ user }) => {
   };
 
   return (
-    <div className="text-black pb-20">
-      {" "}
-      {/* Semua teks di dalam div ini akan berwarna hitam */}
-      <div className="flex items-center justify-center space-x-2 pb-8">
-        <h1 className="text-4xl font-medium tracking-tight sm:text-5xl text-custom-orange">
-          My
-        </h1>
-        <h1 className="text-4xl font-medium tracking-tight sm:text-5xl text-white">
-          Skill
-        </h1>
+    <div className="text-black">
+      <div id="skills" className="pt-24 text-center">
+        {/* Semua teks di dalam div ini akan berwarna hitam */}
+        <div className="flex items-center justify-center space-x-2 pb-8">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-orange">
+            My
+          </h1>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-white">
+            Skill
+          </h1>
+        </div>
       </div>
       {/* Modal Section */}
       {isModalOpen && (
@@ -42,11 +43,24 @@ const BodySkill = ({ user }) => {
             {/* Modal untuk PHP */}
             {selectedSkill === "PHP" && (
               <div>
-                <h2 className="text-xl font-bold text-center">PHP</h2>
-                <p className="text-center">
-                  PHP adalah bahasa pemrograman server-side yang digunakan untuk
-                  mengembangkan aplikasi web dinamis.
-                </p>
+                <h2 className="text-xl font-bold ">PHP</h2>
+                <div className="w-full max-w-4xl bg-gray-200 rounded-full dark:bg-gray-700 mt-4 mx-auto">
+                  {/* Container with increased max-width */}
+                  <div
+                    className="relative bg-blue-600 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-full transform origin-left transition-transform duration-500 ease-out"
+                    style={{ width: "70%" }} // Set target width directly
+                    onAnimationEnd={(e) => {
+                      e.target.style.transform = "scaleX(1)"; // Animate to full width
+                    }}
+                  >
+                    <span
+                      className="absolute inset-0 flex justify-center items-center text-base" // Center text inside the progress bar and adjust font size
+                      style={{ transform: "scaleX(1)" }} // Ensure text is not scaled
+                    >
+                      70%
+                    </span>
+                  </div>
+                </div>
               </div>
             )}
 

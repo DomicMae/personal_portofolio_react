@@ -2,12 +2,13 @@ import "../input.css";
 
 const BodyContactPage = ({ user }) => {
   return (
-    <div className="text-black pb-20">
+    <div className="text-black">
+      <div id="contact" className="pt-24 text-center"></div>
       <div className="flex items-center justify-center space-x-2 pb-20">
-        <h1 className="text-4xl font-medium tracking-tight sm:text-5xl text-white">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-white">
           Contact
         </h1>
-        <h1 className="text-4xl font-medium tracking-tight sm:text-5xl text-custom-orange">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-orange">
           Me!!
         </h1>
       </div>
