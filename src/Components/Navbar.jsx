@@ -1,9 +1,7 @@
 import "../input.css";
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const location = useLocation();
   const [isAboutMeVisible, setIsAboutMeVisible] = useState(false);
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
   const [isProjectVisible, setIsProjectVisible] = useState(false);
@@ -78,7 +76,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar bg-white dark:bg-custom-red fixed w-full z-20 top-0 start-0">
+    <nav className="navbar bg-white dark:bg-custom-red fixed w-full top-0 start-0">
       <div className="grid grid-cols-3 items-center justify-between mx-auto pr-6 pl-6">
         <a href="/" className="flex items-center col-span-1">
           <img src="/logo.png" alt="" />
@@ -88,9 +86,11 @@ const Navbar = () => {
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-custom-red dark:border-gray-700">
             <li>
               <button
-                onClick={() => handleScrollTo("about-me")} // Change "body-home" to "about-me"
-                className={`block py-2 px-3 md:p-0 font-bold ${
-                  isAboutMeVisible ? "text-custom-blue" : "text-white"
+                onClick={() => handleScrollTo("about-me")}
+                className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
+                  isAboutMeVisible
+                    ? "text-custom-blue -translate-y-1 scale-110"
+                    : "text-white"
                 }`}
               >
                 About Me
@@ -100,8 +100,10 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => handleScrollTo("skills")}
-                className={`block py-2 px-3 md:p-0 font-bold ${
-                  isSkillsVisible ? "text-custom-blue" : "text-white"
+                className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
+                  isSkillsVisible
+                    ? "text-custom-blue -translate-y-1 scale-110"
+                    : "text-white"
                 }`}
               >
                 Skill
@@ -110,8 +112,10 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => handleScrollTo("project")}
-                className={`block py-2 px-3 md:p-0 font-bold ${
-                  isProjectVisible ? "text-custom-blue" : "text-white"
+                className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
+                  isProjectVisible
+                    ? "text-custom-blue -translate-y-1 scale-110"
+                    : "text-white"
                 }`}
               >
                 Project
@@ -120,8 +124,10 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => handleScrollTo("contact")}
-                className={`block py-2 px-3 md:p-0 font-bold ${
-                  isContactVisible ? "text-custom-blue" : "text-white"
+                className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
+                  isContactVisible
+                    ? "text-custom-blue -translate-y-1 scale-110"
+                    : "text-white"
                 }`}
               >
                 Contact
@@ -132,14 +138,15 @@ const Navbar = () => {
         <div className="flex items-center col-span-1 justify-end ">
           <button
             type="button"
-            className="text-black bg-white hover:bg-white-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-white-600 dark:hover:bg-white-700 dark:focus:ring-white-800"
+            className="text-black bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-white-600 dark:hover:bg-gray-700 dark:focus:ring-white-800
+  transition ease-in-out duration-300 transform hover:-translate-y-1 hover:scale-105"
           >
             Resume
           </button>
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="transition ease-in-out delay-150 duration-300 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-sticky"
             aria-expanded="false"
           >
