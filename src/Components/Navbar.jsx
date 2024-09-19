@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isAboutMeVisible, setIsAboutMeVisible] = useState(false);
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
   const [isProjectVisible, setIsProjectVisible] = useState(false);
-  const [IsSertifikatVisible, setIsSertifikatVisible] = useState(false);
+  const [isSertifikatVisible, setIsSertifikatVisible] = useState(false);
   const [isContactVisible, setIsContactVisible] = useState(false);
 
   useEffect(() => {
@@ -21,9 +21,11 @@ const Navbar = () => {
           }
           if (entry.target.id === "project") {
             setIsProjectVisible(entry.isIntersecting);
+            console.log("isProjectVisible:", entry.isIntersecting);
           }
           if (entry.target.id === "sertifikat") {
             setIsSertifikatVisible(entry.isIntersecting);
+            console.log("isSertifikatVisible:", entry.isIntersecting);
           }
           if (entry.target.id === "contact") {
             setIsContactVisible(entry.isIntersecting);
@@ -32,7 +34,7 @@ const Navbar = () => {
       },
       {
         root: null, // Use the viewport
-        threshold: 0.5, // Trigger when 50% of the section is visible
+        threshold: 0.1, // Trigger when 10% of the section is visible
       }
     );
 
@@ -82,6 +84,7 @@ const Navbar = () => {
   const handleScrollTo = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
+      console.log("Scrolling to:", sectionId); // Add log
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
@@ -149,7 +152,7 @@ const Navbar = () => {
               <button
                 onClick={() => handleScrollTo("sertifikat")}
                 className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
-                  IsSertifikatVisible
+                  isSertifikatVisible
                     ? "text-custom-blue -translate-y-1 scale-110"
                     : "text-white"
                 }`}
