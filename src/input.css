@@ -4,3 +4,46 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap");
+
+/* styles.css */
+/* Animasi untuk scroll tak terbatas */
+@keyframes loop {
+  0% {
+    transform: translateX(
+      calc(100% + 2.5rem)
+    ); /* Start slightly off the right edge with padding */
+  }
+  100% {
+    transform: translateX(
+      calc(-100% - 2.5rem)
+    ); /* Move slightly off the left edge with padding */
+  }
+}
+
+.animate-scroll-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding-left: 2.5rem; /* Space on the left */
+  padding-right: 2.5rem; /* Space on the right */
+}
+
+.inner {
+  display: flex;
+  width: fit-content; /* Adjust width to fit content */
+  animation: loop 40s linear infinite; /* Adjust duration to control speed */
+}
+
+.fade {
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #f8fafc,
+    transparent 30%,
+    transparent 70%,
+    #f8fafc
+  );
+  position: absolute;
+  inset: 0;
+}

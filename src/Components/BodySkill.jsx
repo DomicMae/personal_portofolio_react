@@ -32,8 +32,14 @@ const BodySkill = ({ user }) => {
       </div>
       {/* Modal Section */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-8 rounded-lg shadow-lg relative">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-white p-8 rounded-lg shadow-lg relative"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               className="absolute top-2 right-4 text-lg font-bold"
               onClick={closeModal}
@@ -44,21 +50,12 @@ const BodySkill = ({ user }) => {
             {selectedSkill === "PHP" && (
               <div>
                 <h2 className="text-xl font-bold ">PHP</h2>
-                <div className="w-full max-w-4xl bg-gray-200 rounded-full dark:bg-gray-700 mt-4 mx-auto">
-                  {/* Container with increased max-width */}
+                <div className="w-80 bg-gray-200 rounded-full dark:bg-gray-800 mt-4 mx-auto">
                   <div
-                    className="relative bg-blue-600 text-xs font-medium text-blue-100 text-center p-2 leading-none rounded-full transform origin-left transition-transform duration-500 ease-out"
-                    style={{ width: "70%" }} // Set target width directly
-                    onAnimationEnd={(e) => {
-                      e.target.style.transform = "scaleX(1)"; // Animate to full width
-                    }}
+                    className="bg-yellow-400 text-base font-medium text-black text-center p-0.5 leading-none rounded-full"
+                    style={{ width: "70%" }} // Sesuaikan dengan persentase yang diinginkan
                   >
-                    <span
-                      className="absolute inset-0 flex justify-center items-center text-base" // Center text inside the progress bar and adjust font size
-                      style={{ transform: "scaleX(1)" }} // Ensure text is not scaled
-                    >
-                      70%
-                    </span>
+                    70%
                   </div>
                 </div>
               </div>
@@ -67,86 +64,224 @@ const BodySkill = ({ user }) => {
             {/* Modal untuk JavaScript */}
             {selectedSkill === "JavaScript" && (
               <div>
-                <h2 className="text-xl font-bold text-center">JavaScript</h2>
-                <p className="text-center">
-                  JavaScript adalah bahasa pemrograman yang berjalan di sisi
-                  klien dan digunakan untuk mengembangkan elemen interaktif di
-                  website.
-                </p>
+                <h2 className="text-xl font-bold">JavaScript</h2>
+                <div className="w-80 bg-gray-200 rounded-full dark:bg-gray-800 mt-4 mx-auto">
+                  <div
+                    className="bg-yellow-400 text-base font-medium text-black text-center p-0.5 leading-none rounded-full"
+                    style={{ width: "85%" }} // Sesuaikan dengan persentase yang diinginkan
+                  >
+                    85%
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Modal untuk JavaScript */}
+            {selectedSkill === "HTML" && (
+              <div>
+                <h2 className="text-xl font-bold">HTML</h2>
+                <div className="w-80 bg-gray-200 rounded-full dark:bg-gray-700 mt-4 mx-auto">
+                  <div
+                    className="bg-yellow-400 text-base font-medium text-black text-center p-0.5 leading-none rounded-full"
+                    style={{ width: "100%" }} // Sesuaikan dengan persentase yang diinginkan
+                  >
+                    100%
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Modal untuk JavaScript */}
+            {selectedSkill === "CSS" && (
+              <div>
+                <h2 className="text-xl font-bold">CSS</h2>
+                <div className="w-80 bg-gray-200 rounded-full dark:bg-gray-700 mt-4 mx-auto">
+                  <div
+                    className="bg-yellow-400 text-base font-medium text-black text-center p-0.5 leading-none rounded-full"
+                    style={{ width: "85%" }} // Sesuaikan dengan persentase yang diinginkan
+                  >
+                    85%
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Modal untuk JavaScript */}
+            {selectedSkill === "SQL" && (
+              <div>
+                <h2 className="text-xl font-bold">SQL</h2>
+                <div className="w-80 bg-gray-200 rounded-full dark:bg-gray-700 mt-4 mx-auto">
+                  <div
+                    className="bg-yellow-400 text-base font-medium text-black text-center p-0.5 leading-none rounded-full"
+                    style={{ width: "85%" }} // Sesuaikan dengan persentase yang diinginkan
+                  >
+                    85%
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Modal untuk JavaScript */}
+            {selectedSkill === "React" && (
+              <div>
+                <h2 className="text-xl font-bold">React</h2>
+                <div className="w-80 bg-gray-200 rounded-full dark:bg-gray-700 mt-4 mx-auto">
+                  <div
+                    className="bg-yellow-400 text-base font-medium text-black text-center p-0.5 leading-none rounded-full"
+                    style={{ width: "85%" }} // Sesuaikan dengan persentase yang diinginkan
+                  >
+                    85%
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Modal untuk JavaScript */}
+            {selectedSkill === "Laravel" && (
+              <div>
+                <h2 className="text-xl font-bold">Laravel</h2>
+                <div className="w-80 bg-gray-200 rounded-full dark:bg-gray-700 mt-4 mx-auto">
+                  <div
+                    className="bg-yellow-400 text-base font-medium text-black text-center p-0.5 leading-none rounded-full"
+                    style={{ width: "85%" }} // Sesuaikan dengan persentase yang diinginkan
+                  >
+                    85%
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Modal untuk JavaScript */}
+            {selectedSkill === "Bootstrap" && (
+              <div>
+                <h2 className="text-xl font-bold">Bootstrap</h2>
+                <div className="w-80 bg-gray-200 rounded-full dark:bg-gray-700 mt-4 mx-auto">
+                  <div
+                    className="bg-yellow-400 text-base font-medium text-black text-center p-0.5 leading-none rounded-full"
+                    style={{ width: "85%" }} // Sesuaikan dengan persentase yang diinginkan
+                  >
+                    85%
+                  </div>
+                </div>
               </div>
             )}
           </div>
         </div>
       )}
-      <div className="flex items-center justify-center space-x-2 pb-8">
-        <h1 className="text-2xl font-bold tracking-tight sm:text-2xl text-white">
-          Skill
-        </h1>
+      <div className="overflow-hidden w-full">
+        <div className="items-center justify-end grid grid-cols-8 animate-scroll">
+          <div
+            className="col-span-1 flex flex-col items-center justify-end"
+            onClick={() => openModal("PHP")}
+          >
+            <img
+              src="php.png"
+              alt=""
+              className="rounded-md w-82 h-82 pt-12 pb-4"
+            />
+            <p className="font-medium text-custom-orange text-xl text-center pt-4">
+              PHP
+            </p>
+          </div>
+          <div
+            className="col-span-1 flex flex-col items-center justify-end"
+            onClick={() => openModal("JavaScript")}
+          >
+            <img src="js.png" alt="" className="rounded-md w-82 h-82 pt-4" />
+            <p className="font-medium text-custom-orange text-xl text-center pt-4">
+              JavaScript
+            </p>
+          </div>
+          <div
+            className="col-span-1 flex flex-col items-center justify-end"
+            onClick={() => openModal("HTML")}
+          >
+            <img
+              src="html.png"
+              alt=""
+              className="rounded-md w-82 h-82 pt-6 pb-3"
+            />
+            <p className="font-medium text-custom-orange text-xl text-center">
+              HTML
+            </p>
+          </div>
+          <div
+            className="col-span-1 flex flex-col items-center justify-end"
+            onClick={() => openModal("CSS")}
+          >
+            <img
+              src="css.png"
+              alt=""
+              className="rounded-md w-82 h-82 pt-6 pb-4"
+            />
+            <p className="font-medium text-custom-orange text-xl text-center pt-2 pb-2">
+              CSS
+            </p>
+          </div>
+          <div
+            className="col-span-1 flex flex-col items-center justify-end"
+            onClick={() => openModal("SQL")}
+          >
+            <img
+              src="sql.png"
+              alt=""
+              className="rounded-md w-82 h-82 pt-12 pb-4"
+            />
+            <p className="font-medium text-custom-orange text-xl text-center pt-2 pb-1">
+              SQL
+            </p>
+          </div>
+          <div
+            className="col-span-1 flex flex-col items-center justify-end"
+            onClick={() => openModal("React")}
+          >
+            <img
+              src="react.png"
+              alt=""
+              className="rounded-md w-20 h-21 pt-12"
+            />
+            <p className="font-medium text-custom-orange text-xl text-center pt-6 pb-3">
+              React
+            </p>
+          </div>
+          <div
+            className="col-span-1 flex flex-col items-center justify-end"
+            onClick={() => openModal("Laravel")}
+          >
+            <img
+              src="laravel.png"
+              alt=""
+              className="rounded-md w-82 h-82 pt-3"
+            />
+            <p className="font-medium text-custom-orange text-xl text-center pt-2">
+              Laravel
+            </p>
+          </div>
+          <div
+            className="col-span-1 flex flex-col items-center justify-end"
+            onClick={() => openModal("Bootstrap")}
+          >
+            <img
+              src="bootstrap.png"
+              alt=""
+              className="rounded-md w-82 h-82 pt-6"
+            />
+            <p className="font-medium text-custom-orange text-xl text-center pb-1">
+              Bootstrap
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="items-center justify-center grid grid-cols-4 ">
-        <div
-          className="col-span-1 flex flex-col items-center justify-center"
-          onClick={() => openModal("PHP")}
-        >
-          <img src="php.png" alt="" className="rounded-md w-82 h-82 pt-6" />
-          <p className="font-medium text-custom-orange text-xl text-center pt-6">
-            PHP
-          </p>
-        </div>
-        <div
-          className="col-span-1 flex flex-col items-center justify-center"
-          onClick={() => openModal("JavaScript")}
-        >
-          <img src="js.png" alt="" className="rounded-md w-82 h-82" />
-          <p className="font-medium text-custom-orange text-xl text-center">
-            JavaScript
-          </p>
-        </div>
-        <div className="col-span-1 flex flex-col items-center justify-center">
-          <img src="html.png" alt="" className="rounded-md w-82 h-82 pt-4" />
-          <p className="font-medium text-custom-orange text-xl text-center pb-4">
-            HTML
-          </p>
-        </div>
-        <div className="col-span-1 flex flex-col items-center justify-center">
-          <img src="css.png" alt="" className="rounded-md w-82 h-82 pb-4" />
-          <p className="font-medium text-custom-orange text-xl text-center pb-3">
-            CSS
-          </p>
-        </div>
-      </div>
-      <div className="items-center justify-center grid grid-cols-4">
-        <div className="col-span-1 flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center space-y-2 pt-12">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="font-bold text-white text-4xl text-center pt-6 pb-3">
+            GitHub Contributions
+          </h1>
           <img
-            src="sql.png"
-            alt=""
-            className="rounded-md w-82 h-82 pt-6 pb-4"
+            src="Github Progress.png"
+            alt="GitHub"
+            className="rounded-md w-82 h-82"
           />
-          <p className="font-medium text-custom-orange text-xl text-center pt-4">
-            SQL
-          </p>
-        </div>
-        <div className="col-span-1 flex flex-col items-center justify-center ">
-          <img src="react.png" alt="" className="rounded-md w-20 h-24 pt-4" />
-          <p className="font-medium text-custom-orange text-xl text-center pt-8">
-            React
-          </p>
-        </div>
-        <div className="col-span-1 flex flex-col items-center justify-center">
-          <img src="laravel.png" alt="" className="rounded-md w-82 h-82" />
-          <p className="font-medium text-custom-orange text-xl text-center">
-            Laravel
-          </p>
-        </div>
-        <div className="col-span-1 flex flex-col items-center justify-center">
-          <img
-            src="bootstrap.png"
-            alt=""
-            className="rounded-md w-82 h-82 pt-4"
-          />
-          <p className="font-medium text-custom-orange text-xl text-center pb-4">
-            Bootstrap
-          </p>
         </div>
       </div>
     </div>

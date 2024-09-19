@@ -10,19 +10,20 @@ const BodyAboutMePage = ({ user }) => {
             About
           </h1>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-orange">
-            Me
+            Me!!
           </h1>
         </div>
       </div>
       <div className="grid grid-cols-4 gap-4 p-10">
         <div className="col-span-1">{/* Kolom pertama kosong */}</div>
         <div className="col-span-2 flex flex-col items-center justify-center">
-          <p className="font-normal text-custom-orange text-xl text-center">
-            Saya merupakan lulusan S1 Sistem Informasi Bisnis Universitas
-            Kristen Petra. Seorang yang teliti dan terampil dalam membuat
-            website. Memiliki kemampuan komunikasi lisan dan verbal yang baik,
-            memiliki kemampuan problem solving dalam menghadapi masalah serta
-            dapat menyumbang berbagai inovasi yang menarik.
+          <p className="font-normal text-custom-orange text-xl text-justify">
+            Saya Ardon Yunors Tallan, 22 Tahun dari Sidoarjo. Saya adalah
+            programmer dan merupakan lulusan S1 Sistem Informasi Bisnis
+            Universitas Kristen Petra. Seorang yang teliti dan terampil dalam
+            membuat website. Memiliki kemampuan komunikasi lisan dan verbal yang
+            baik, memiliki kemampuan problem solving dalam menghadapi masalah
+            serta dapat menyumbang berbagai inovasi yang menarik.
           </p>
           <hr className="w-full border-t-2 border-white mt-6" />
         </div>

@@ -5,6 +5,7 @@ const Navbar = () => {
   const [isAboutMeVisible, setIsAboutMeVisible] = useState(false);
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
   const [isProjectVisible, setIsProjectVisible] = useState(false);
+  const [isSertifikat, setIsSertifikatVisible] = useState(false);
   const [isContactVisible, setIsContactVisible] = useState(false);
 
   useEffect(() => {
@@ -75,14 +76,25 @@ const Navbar = () => {
     }
   };
 
+  const handleDownload = () => {
+    // Create an invisible link
+    const link = document.createElement("a");
+    link.href = "/Resume.pdf"; // Path relative to the public directory
+    link.download = "Resume.pdf"; // Filename for download
+
+    // Append the link to the body and trigger click
+    document.body.appendChild(link);
+    link.click();
+
+    // Remove the link after download
+    document.body.removeChild(link);
+  };
+
   return (
     <nav className="navbar bg-white dark:bg-custom-red fixed w-full top-0 start-0 z-20">
       <div className="grid grid-cols-3 items-center justify-between mx-auto pr-6 pl-6">
         <a href="/" className="flex items-center col-span-1">
           <img src="/logo.png" alt="" />
-          <span className="text-2xl font-medium text-white font-redhat">
-            ARDON
-          </span>
         </a>
         <div className="flex items-center justify-center col-span-1">
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-custom-red dark:border-gray-700">
@@ -138,37 +150,17 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center col-span-1 justify-end ">
-          <button
-            type="button"
-            className="text-black bg-white hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-white-600 dark:hover:bg-gray-700 dark:focus:ring-white-800
-  transition ease-in-out duration-300 transform hover:-translate-y-1 hover:scale-105"
-          >
-            Resume
-          </button>
-          <button
-            data-collapse-toggle="navbar-sticky"
-            type="button"
-            className="transition ease-in-out delay-150 duration-300 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
+          <div>
+            <button
+              type="button"
+              id="downloadButton"
+              onClick={handleDownload}
+              className="group relative text-black bg-white hover:bg-custom-blue hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-white-600 dark:group-hover:bg-custom-blue dark:focus:ring-white-800
+    transition-transform ease-in-out duration-300 transform hover:-translate-y-1 hover:scale-105"
             >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
+              Resume
+            </button>
+          </div>
         </div>
       </div>
     </nav>

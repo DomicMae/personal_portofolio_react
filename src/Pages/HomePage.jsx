@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Linkedin, Instagram, Github } from "lucide-react";
 import BodyHomePage from "../Components/BodyHomePage";
 import Navbar from "../Components/Navbar";
 import BodySkill from "../Components/BodySkill";
@@ -64,16 +65,29 @@ export default function HomePage(props) {
         <section id="contact" className="py-10">
           <BodyContactPage />
         </section>
-      </main>
 
-      {/* Footer Section */}
-      <footer className="footer footer-center bg-black text-base-content text-white text-center p-4">
-        <aside className="grid-flow-col items-center">
-          <p className="text-lg">
-            Make in {new Date().getFullYear()} - Ardon Yunors Tallan
-          </p>
-        </aside>
-      </footer>
+        {/* Footer Section */}
+        <footer className="footer footer-center bg-black text-base-content text-white text-center pt-8 pb-8 justify-center">
+          <aside>
+            <p>© {new Date().getFullYear()} Ardon - All right reserved</p>
+          </aside>
+          <nav>
+            <div className="flex justify-center pt-8 gap-x-4">
+              <button className="">
+                <Linkedin className="w-10 h-10" />
+              </button>
+
+              <button className="">
+                <Instagram className="w-10 h-10" />
+              </button>
+
+              <button className="">
+                <Github className="w-10 h-10" />
+              </button>
+            </div>
+          </nav>
+        </footer>
+      </main>
     </div>
   );
 }
