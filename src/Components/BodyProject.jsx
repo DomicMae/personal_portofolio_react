@@ -3,7 +3,7 @@ import "../input.css";
 
 const BodyProject = ({ user }) => {
   return (
-    <div className="text-black">
+    <div className="text-black pb-20">
       <div id="project" className="pt-24 text-center"></div>
       <div className="flex items-center justify-center space-x-2 pb-8">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-orange">

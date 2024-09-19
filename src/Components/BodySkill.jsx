@@ -18,7 +18,7 @@ const BodySkill = ({ user }) => {
   };
 
   return (
-    <div className="text-black">
+    <div className="text-black pb-20">
       <div id="skills" className="pt-24 text-center">
         {/* Semua teks di dalam div ini akan berwarna hitam */}
         <div className="flex items-center justify-center space-x-2 pb-8">

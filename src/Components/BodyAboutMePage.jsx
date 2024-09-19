@@ -2,7 +2,7 @@ import "../input.css";
 
 const BodyAboutMePage = ({ user }) => {
   return (
-    <div className="text-black">
+    <div className="text-black pb-20">
       <div id="about-me" className="pt-24 text-center">
         {/* Semua teks di dalam div ini akan berwarna hitam */}
         <div className="flex items-center justify-center space-x-4">

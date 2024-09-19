@@ -21,11 +21,9 @@ const Navbar = () => {
           }
           if (entry.target.id === "project") {
             setIsProjectVisible(entry.isIntersecting);
-            console.log("isProjectVisible:", entry.isIntersecting);
           }
           if (entry.target.id === "sertifikat") {
             setIsSertifikatVisible(entry.isIntersecting);
-            console.log("isSertifikatVisible:", entry.isIntersecting);
           }
           if (entry.target.id === "contact") {
             setIsContactVisible(entry.isIntersecting);
