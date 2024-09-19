@@ -6,6 +6,7 @@ import BodySkill from "../Components/BodySkill";
 import BodyAboutMePage from "../Components/BodyAboutMePage";
 import BodyProject from "../Components/BodyProject";
 import BodyContactPage from "../Components/BodyContactPage";
+import BodySertifikatPage from "../Components/BodySertikatPage";
 
 export default function HomePage(props) {
   const [isLoading, setIsLoading] = useState(true); // State to track loading status
@@ -59,6 +60,11 @@ export default function HomePage(props) {
         {/* Section BodyProject */}
         <section id="project" className="py-10">
           <BodyProject />
+        </section>
+
+        {/* Section BodyContactPage */}
+        <section id="sertifikat" className="py-10">
+          <BodySertifikatPage />
         </section>
 
         {/* Section BodyContactPage */}

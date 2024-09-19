@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isAboutMeVisible, setIsAboutMeVisible] = useState(false);
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
   const [isProjectVisible, setIsProjectVisible] = useState(false);
-  const [isSertifikat, setIsSertifikatVisible] = useState(false);
+  const [IsSertifikatVisible, setIsSertifikatVisible] = useState(false);
   const [isContactVisible, setIsContactVisible] = useState(false);
 
   useEffect(() => {
@@ -22,6 +22,9 @@ const Navbar = () => {
           if (entry.target.id === "project") {
             setIsProjectVisible(entry.isIntersecting);
           }
+          if (entry.target.id === "sertifikat") {
+            setIsSertifikatVisible(entry.isIntersecting);
+          }
           if (entry.target.id === "contact") {
             setIsContactVisible(entry.isIntersecting);
           }
@@ -37,6 +40,7 @@ const Navbar = () => {
     const aboutMeSection = document.getElementById("about-me");
     const skillsSection = document.getElementById("skills");
     const projectSection = document.getElementById("project");
+    const sertifikatSection = document.getElementById("sertifikat");
     const contactSection = document.getElementById("contact");
 
     if (aboutMeSection) {
@@ -47,6 +51,9 @@ const Navbar = () => {
     }
     if (projectSection) {
       observer.observe(projectSection);
+    }
+    if (sertifikatSection) {
+      observer.observe(sertifikatSection);
     }
     if (contactSection) {
       observer.observe(contactSection);
@@ -62,6 +69,9 @@ const Navbar = () => {
       }
       if (projectSection) {
         observer.unobserve(projectSection);
+      }
+      if (sertifikatSection) {
+        observer.unobserve(sertifikatSection);
       }
       if (contactSection) {
         observer.unobserve(contactSection);
@@ -133,6 +143,18 @@ const Navbar = () => {
                 }`}
               >
                 Project
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => handleScrollTo("sertifikat")}
+                className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
+                  IsSertifikatVisible
+                    ? "text-custom-blue -translate-y-1 scale-110"
+                    : "text-white"
+                }`}
+              >
+                Sertifikat
               </button>
             </li>
             <li>
