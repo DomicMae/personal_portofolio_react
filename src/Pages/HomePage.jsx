@@ -43,7 +43,7 @@ export default function HomePage(props) {
       <Navbar user={props.auth.user} />
       <main className="mt-24">
         {/* Section BodyHomePage */}
-        <section id="body-home" className="py-10">
+        <section id="body-home" className="pb-20">
           <BodyHomePage />
         </section>
 
