@@ -79,17 +79,35 @@ export default function HomePage(props) {
           </aside>
           <nav>
             <div className="flex justify-center pt-8 gap-x-4">
-              <button className="">
-                <Linkedin className="w-10 h-10" />
-              </button>
+              <a
+                href="https://www.linkedin.com/in/ardonyunors/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="">
+                  <Linkedin className="w-10 h-10" />
+                </button>
+              </a>
 
-              <button className="">
-                <Instagram className="w-10 h-10" />
-              </button>
+              <a
+                href="https://www.instagram.com/ardonyunors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="">
+                  <Instagram className="w-10 h-10" />
+                </button>
+              </a>
 
-              <button className="">
-                <Github className="w-10 h-10" />
-              </button>
+              <a
+                href="https://github.com/DomicMae"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="">
+                  <Github className="w-10 h-10" />
+                </button>
+              </a>
             </div>
           </nav>
         </footer>

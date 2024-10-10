@@ -12,9 +12,9 @@ const BodySertifikatPage = ({ user }) => {
       </div>
 
       {/* First Card */}
-      <div className="flex justify-center gap-10 px-20 mt-6">
+      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
         {/* First Image Card */}
-        <div className="card rounded-3xl bg-neutral-800 w-1/2 shadow-xl">
+        <div className="card rounded-3xl bg-neutral-800 w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
               src="/Sertifikat Coursera_1.jpg" // Make sure the preview image is in the public folder
@@ -30,7 +30,7 @@ const BodySertifikatPage = ({ user }) => {
         </div>
 
         {/* Second Image Card */}
-        <div className="card rounded-3xl bg-neutral-800 w-1/2 shadow-xl">
+        <div className="card rounded-3xl bg-neutral-800 w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
               src="/Sertifikat Courser_2.jpg" // Make sure this image exists in the public folder
@@ -47,9 +47,9 @@ const BodySertifikatPage = ({ user }) => {
       </div>
 
       {/* Second Card */}
-      <div className="flex justify-center gap-10 px-20 mt-6">
+      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
         {/* First Image Card */}
-        <div className="card rounded-3xl bg-neutral-800 w-1/2 shadow-xl">
+        <div className="card rounded-3xl bg-neutral-800 w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
               src="/Sertifikat Coursera_3.jpg" // Make sure the preview image is in the public folder
@@ -65,7 +65,7 @@ const BodySertifikatPage = ({ user }) => {
         </div>
 
         {/* Second Image Card */}
-        <div className="card rounded-3xl bg-neutral-800 w-1/2 shadow-xl">
+        <div className="card rounded-3xl bg-neutral-800 w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
               src="/Sertifikat Coursera_4.jpg"
@@ -82,9 +82,9 @@ const BodySertifikatPage = ({ user }) => {
       </div>
 
       {/* Third Card */}
-      <div className="flex justify-center gap-10 px-20 mt-6">
+      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
         {/* First Image Card */}
-        <div className="card rounded-3xl bg-neutral-800 w-1/2 shadow-xl">
+        <div className="card rounded-3xl bg-neutral-800 w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
               src="/Sertifikat_Dicoding_AWS.jpg" // Make sure the preview image is in the public folder
@@ -100,7 +100,7 @@ const BodySertifikatPage = ({ user }) => {
         </div>
 
         {/* Second Image Card */}
-        <div className="card rounded-3xl bg-neutral-800 w-1/2 shadow-xl">
+        <div className="card rounded-3xl bg-neutral-800 w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
               src="/Sertifikat_Dicoding_DataScience.jpg"
@@ -117,9 +117,9 @@ const BodySertifikatPage = ({ user }) => {
       </div>
 
       {/* Fourth Card */}
-      <div className="flex justify-center gap-10 px-20 mt-6">
+      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
         {/* First Image Card */}
-        <div className="card rounded-3xl bg-neutral-800 w-1/2 shadow-xl">
+        <div className="card rounded-3xl bg-neutral-800 w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
               src="/Sertifikat_Dicoding_Javascript.jpg" // Make sure the preview image is in the public folder
@@ -135,7 +135,7 @@ const BodySertifikatPage = ({ user }) => {
         </div>
 
         {/* Second Image Card */}
-        <div className="card rounded-3xl bg-neutral-800 w-1/2 shadow-xl">
+        <div className="card rounded-3xl bg-neutral-800 w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
               src="/Sertifikat_Dicoding_ProyekManagement.jpg"
@@ -152,9 +152,9 @@ const BodySertifikatPage = ({ user }) => {
       </div>
 
       {/* Fifth Card */}
-      <div className="flex justify-center gap-10 px-20 mt-6">
+      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
         {/* First Image Card */}
-        <div className="card rounded-3xl bg-neutral-800 w-1/2 shadow-xl">
+        <div className="card rounded-3xl bg-neutral-800 w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
               src="/Sertifikat_Dicoding_SQL.jpg" // Make sure the preview image is in the public folder
@@ -170,7 +170,7 @@ const BodySertifikatPage = ({ user }) => {
         </div>
 
         {/* Second Image Card */}
-        <div className="card rounded-3xl bg-neutral-800 w-1/2 shadow-xl">
+        <div className="card rounded-3xl bg-neutral-800 w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
               src="/Sertifikat-baparekraf-developer-day-2023.jpg"

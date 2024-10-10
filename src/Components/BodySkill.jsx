@@ -169,7 +169,7 @@ const BodySkill = ({ user }) => {
         </div>
       )}
       <div className="overflow-hidden w-full">
-        <div className="items-center justify-end grid grid-cols-8 animate-scroll">
+        <div className="items-center justify-end grid grid-cols-2 sm:grid-cols-8 animate-scroll">
           <div
             className="col-span-1 flex flex-col items-center justify-end"
             onClick={() => openModal("PHP")}
@@ -274,13 +274,13 @@ const BodySkill = ({ user }) => {
       </div>
       <div className="flex flex-col items-center justify-center space-y-2 pt-12">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="font-bold text-white text-4xl text-center pt-6 pb-3">
+          <h1 className="font-bold text-white text-2xl sm:text-4xl text-center pt-6 pb-3">
             GitHub Contributions
           </h1>
           <img
             src="Github Progress.png"
             alt="GitHub"
-            className="rounded-md w-82 h-82"
+            className="rounded-md w-82 h-82 sm:w-82 sm:h-82"
           />
         </div>
       </div>

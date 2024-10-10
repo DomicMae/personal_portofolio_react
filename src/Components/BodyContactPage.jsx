@@ -1,6 +1,50 @@
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import "../input.css";
 
-const BodyContactPage = ({ user }) => {
+const BodyContactPage = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Data to be sent via EmailJS
+    const emailParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "service_domic", // Replace with your actual EmailJS service ID
+        "template_gdf9t1j", // Replace with your actual EmailJS template ID
+        emailParams,
+        "f-POm7UiLaWYdhXUu" // Replace with your actual EmailJS user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send message.");
+        }
+      );
+  };
+
   return (
     <div className="text-black pb-20">
       <div id="contact" className="pt-24 text-center"></div>
@@ -12,7 +56,10 @@ const BodyContactPage = ({ user }) => {
           Me!!
         </h1>
       </div>
-      <form className="space-y-8 max-w-sm mx-auto px-4 py-8">
+      <form
+        className="space-y-8 max-w-sm mx-auto px-4 py-8"
+        onSubmit={handleSubmit}
+      >
         <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-6">
           <div className="sm:col-span-2">
             <label
@@ -28,6 +75,8 @@ const BodyContactPage = ({ user }) => {
                 type="text"
                 placeholder="Name"
                 autoComplete="name"
+                value={formData.name}
+                onChange={handleChange}
                 className="block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm"
               />
             </div>
@@ -46,6 +95,8 @@ const BodyContactPage = ({ user }) => {
                 type="email"
                 placeholder="Email"
                 autoComplete="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm"
               />
             </div>
@@ -62,7 +113,9 @@ const BodyContactPage = ({ user }) => {
                 id="message"
                 name="message"
                 rows="4"
-                placeholder="Message"
+                placeholder="Tuliskan email/no wa kalian diatas"
+                value={formData.message}
+                onChange={handleChange}
                 className="block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm"
               />
             </div>
@@ -77,8 +130,6 @@ const BodyContactPage = ({ user }) => {
           </button>
         </div>
       </form>
-
-      {/* Kode lainnya */}
     </div>
   );
 };
