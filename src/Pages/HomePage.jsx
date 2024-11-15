@@ -43,12 +43,12 @@ export default function HomePage(props) {
       <Navbar user={props.auth.user} />
       <main className="mt-24">
         {/* Section BodyHomePage */}
-        <section id="body-home" className="pb-20">
+        <section id="body-home" className="pb-20 ">
           <BodyHomePage />
         </section>
 
         {/* Section BodyAboutMePage */}
-        <section id="about-me" className="py-10">
+        <section id="about-me" className="py-10 bg-custom-black">
           <BodyAboutMePage />
         </section>
 
@@ -58,7 +58,7 @@ export default function HomePage(props) {
         </section>
 
         {/* Section BodyProject */}
-        <section id="project" className="py-10">
+        <section id="project" className="py-10 bg-custom-black">
           <BodyProject />
         </section>
 
@@ -68,7 +68,7 @@ export default function HomePage(props) {
         </section>
 
         {/* Section BodyContactPage */}
-        <section id="contact" className="py-10">
+        <section id="contact" className="py-10 bg-custom-black">
           <BodyContactPage />
         </section>
 

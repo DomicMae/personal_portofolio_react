@@ -80,91 +80,93 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar bg-white dark:bg-custom-red fixed w-full top-0 start-0 z-20">
-      <div className="flex items-center justify-between px-4 md:px-6">
-        <a href="/" className="flex items-center">
-          <img src="/logo.png" alt="Logo" className="h-20" />
-        </a>
-        <button
-          className="md:hidden text-black focus:outline-none px-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          <Menu className="w-6 h-6 text-white" />
-        </button>
-        <div className="items-center justify-center col-span-1 hidden md:flex">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-custom-red dark:border-gray-700">
-            <li>
+    <nav className="navbar bg-white dark:bg-custom-red fixed w-full py-4">
+      <div className="px-10 ">
+        <div className="flex items-center justify-between px-2 md:px-4">
+          <a href="/" className="flex items-center">
+            <img src="/favicon.png" alt="Logo" className="h-16" />
+          </a>
+          <button
+            className="md:hidden text-black focus:outline-none px-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <Menu className="w-6 h-6 text-custom-white" />
+          </button>
+          <div className="items-center justify-center col-span-1 hidden md:flex">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-custom-red dark:border-gray-700">
+              <li>
+                <button
+                  onClick={() => handleScrollTo("about-me")}
+                  className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
+                    isAboutMeVisible
+                      ? "text-custom-blue -translate-y-1 scale-110"
+                      : "text-custom-white"
+                  }`}
+                >
+                  About Me
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleScrollTo("skills")}
+                  className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
+                    isSkillsVisible
+                      ? "text-custom-blue -translate-y-1 scale-110"
+                      : "text-custom-white"
+                  }`}
+                >
+                  Skill
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleScrollTo("project")}
+                  className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
+                    isProjectVisible
+                      ? "text-custom-blue -translate-y-1 scale-110"
+                      : "text-custom-white"
+                  }`}
+                >
+                  Project
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleScrollTo("sertifikat")}
+                  className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
+                    isSertifikatVisible
+                      ? "text-custom-blue -translate-y-1 scale-110"
+                      : "text-custom-white"
+                  }`}
+                >
+                  Sertifikat
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleScrollTo("contact")}
+                  className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
+                    isContactVisible
+                      ? "text-custom-blue -translate-y-1 scale-110"
+                      : "text-custom-white"
+                  }`}
+                >
+                  Contact
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div className="items-center col-span-1 justify-end hidden md:flex">
+            <div>
               <button
-                onClick={() => handleScrollTo("about-me")}
-                className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
-                  isAboutMeVisible
-                    ? "text-custom-blue -translate-y-1 scale-110"
-                    : "text-white"
-                }`}
+                type="button"
+                id="downloadButton"
+                onClick={handleDownload}
+                className="group relative text-black bg-white hover:bg-custom-blue hover:text-custom-white focus:outline-none focus:ring-0 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-white-600 dark:group-hover:bg-custom-blue transition-transform ease-in-out duration-300 transform hover:-translate-y-1 hover:scale-105"
               >
-                About Me
+                Resume
               </button>
-            </li>
-            <li>
-              <button
-                onClick={() => handleScrollTo("skills")}
-                className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
-                  isSkillsVisible
-                    ? "text-custom-blue -translate-y-1 scale-110"
-                    : "text-white"
-                }`}
-              >
-                Skill
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => handleScrollTo("project")}
-                className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
-                  isProjectVisible
-                    ? "text-custom-blue -translate-y-1 scale-110"
-                    : "text-white"
-                }`}
-              >
-                Project
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => handleScrollTo("sertifikat")}
-                className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
-                  isSertifikatVisible
-                    ? "text-custom-blue -translate-y-1 scale-110"
-                    : "text-white"
-                }`}
-              >
-                Sertifikat
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => handleScrollTo("contact")}
-                className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
-                  isContactVisible
-                    ? "text-custom-blue -translate-y-1 scale-110"
-                    : "text-white"
-                }`}
-              >
-                Contact
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div className="items-center col-span-1 justify-end hidden md:flex">
-          <div>
-            <button
-              type="button"
-              id="downloadButton"
-              onClick={handleDownload}
-              className="group relative text-black bg-white hover:bg-custom-blue hover:text-white focus:outline-none focus:ring-0 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-white-600 dark:group-hover:bg-custom-blue transition-transform ease-in-out duration-300 transform hover:-translate-y-1 hover:scale-105"
-            >
-              Resume
-            </button>
+            </div>
           </div>
         </div>
       </div>
@@ -177,7 +179,7 @@ const Navbar = () => {
               <button
                 onClick={() => handleScrollTo("about-me")}
                 className={`block w-full text-left px-1 ${
-                  isAboutMeVisible ? "text-custom-blue" : "text-white"
+                  isAboutMeVisible ? "text-custom-blue" : "text-custom-white"
                 }`}
               >
                 About Me
@@ -187,7 +189,7 @@ const Navbar = () => {
               <button
                 onClick={() => handleScrollTo("skills")}
                 className={`block w-full text-left px-1 ${
-                  isSkillsVisible ? "text-custom-blue" : "text-white"
+                  isSkillsVisible ? "text-custom-blue" : "text-custom-white"
                 }`}
               >
                 Skills
@@ -197,7 +199,7 @@ const Navbar = () => {
               <button
                 onClick={() => handleScrollTo("project")}
                 className={`block w-full text-left px-1 ${
-                  isProjectVisible ? "text-custom-blue" : "text-white"
+                  isProjectVisible ? "text-custom-blue" : "text-custom-white"
                 }`}
               >
                 Project
@@ -207,7 +209,7 @@ const Navbar = () => {
               <button
                 onClick={() => handleScrollTo("sertifikat")}
                 className={`block w-full text-left px-1 ${
-                  isSertifikatVisible ? "text-custom-blue" : "text-white"
+                  isSertifikatVisible ? "text-custom-blue" : "text-custom-white"
                 }`}
               >
                 Sertifikat
@@ -217,7 +219,7 @@ const Navbar = () => {
               <button
                 onClick={() => handleScrollTo("contact")}
                 className={`block w-full text-left px-1 ${
-                  isContactVisible ? "text-custom-blue" : "text-white"
+                  isContactVisible ? "text-custom-blue" : "text-custom-white"
                 }`}
               >
                 Contact
@@ -226,7 +228,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={handleDownload}
-                className="block w-full text-left bg-white text-black px-4 py-2 rounded-lg shadow-md hover:bg-custom-blue hover:text-white"
+                className="block w-full text-left bg-white text-black px-4 py-2 rounded-lg shadow-md hover:bg-custom-blue hover:text-custom-white"
               >
                 Resume
               </button>

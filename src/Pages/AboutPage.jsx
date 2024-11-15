@@ -7,7 +7,7 @@ export default function AboutPage(props) {
     console.log(props.auth.user); // This will log the user object
   }, [props.auth.user]); // Run the effect when props.auth.user changes
   return (
-    <div className="min-h-screen flex flex-col bg-custom-red">
+    <div className="min-h-screen flex flex-col bg-custom-black">
       <Navbar user={props.auth.user} />
       <main className="mt-24">
         {" "}

@@ -6,9 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "custom-red": "#51191D",
+        "custom-red": "#17181D",
         "custom-orange": "#DBAE52",
-        "custom-blue": "#496396",
+        "custom-blue": "#5A7480",
+        "custom-black": "#29343D",
+        "custom-white": "#92A4B1",
       },
       fontFamily: {
         jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
