@@ -43,32 +43,41 @@ export default function HomePage(props) {
       <Navbar user={props.auth.user} />
       <main className="mt-24">
         {/* Section BodyHomePage */}
-        <section id="body-home" className="pb-20 ">
+        <section id="body-home" className="w-full min-h-screen">
           <BodyHomePage />
         </section>
 
         {/* Section BodyAboutMePage */}
-        <section id="about-me" className="py-10 bg-custom-black">
+        <section
+          id="about-me"
+          className="w-full min-h-screen py-10 bg-custom-black"
+        >
           <BodyAboutMePage />
         </section>
 
         {/* Section BodySkill */}
-        <section id="skills" className="py-10">
+        <section id="skills" className="w-full min-h-screen py-10">
           <BodySkill />
         </section>
 
         {/* Section BodyProject */}
-        <section id="project" className="py-10 bg-custom-black">
+        <section
+          id="project"
+          className="w-full min-h-screen py-10 bg-custom-black"
+        >
           <BodyProject />
         </section>
 
         {/* Section BodySertifikatPage */}
-        <section id="sertifikat" className="py-10">
+        <section id="sertifikat" className="w-full min-h-screen py-10">
           <BodySertifikatPage />
         </section>
 
         {/* Section BodyContactPage */}
-        <section id="contact" className="py-10 bg-custom-black">
+        <section
+          id="contact"
+          className="w-full min-h-screen py-10 bg-custom-black"
+        >
           <BodyContactPage />
         </section>
 
