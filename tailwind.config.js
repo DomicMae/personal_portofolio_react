@@ -9,8 +9,9 @@ module.exports = {
         "custom-red": "#17181D",
         "custom-orange": "#5A7480",
         "custom-blue": "#5A7480",
-        "custom-black": "#29343D",
+        "custom-black": "#292C35",
         "custom-white": "#92A4B1",
+        "custom-yellow": "#DBAE52",
       },
       fontFamily: {
         jakarta: ['"Plus Jakarta Sans"', "sans-serif"],

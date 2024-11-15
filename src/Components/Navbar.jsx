@@ -80,7 +80,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar bg-white dark:bg-custom-red fixed w-full py-4">
+    <nav className="navbar bg-white dark:bg-custom-red fixed w-full py-4 font-jakarta z-20">
       <div className="px-10 ">
         <div className="flex items-center justify-between px-2 md:px-4">
           <a href="/" className="flex items-center">

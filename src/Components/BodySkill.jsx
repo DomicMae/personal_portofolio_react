@@ -21,11 +21,9 @@ const BodySkill = ({ user }) => {
     <div className="text-black pb-20">
       <div id="skills" className="pt-24 text-center">
         {/* Semua teks di dalam div ini akan berwarna hitam */}
-        <div className="flex items-center justify-center space-x-2 pb-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-orange">
-            My
-          </h1>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-white">
+        <div className="flex items-center justify-center space-x-2 pb-8 text-custom-white">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">My</h1>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Skill
           </h1>
         </div>
@@ -274,7 +272,7 @@ const BodySkill = ({ user }) => {
       </div>
       <div className="flex flex-col items-center justify-center space-y-2 pt-12">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="font-bold text-white text-2xl sm:text-4xl text-center pt-6 pb-3">
+          <h1 className="font-bold text-custom-white text-2xl sm:text-4xl text-center pt-6 pb-3">
             GitHub Contributions
           </h1>
           <img

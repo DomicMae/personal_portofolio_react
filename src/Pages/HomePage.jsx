@@ -41,7 +41,7 @@ export default function HomePage(props) {
       }`}
     >
       <Navbar user={props.auth.user} />
-      <main className="mt-24">
+      <main className="mt-24 font-jakarta">
         {/* Section BodyHomePage */}
         <section id="body-home" className="w-full min-h-screen">
           <BodyHomePage />

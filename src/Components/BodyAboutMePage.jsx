@@ -6,10 +6,10 @@ const BodyAboutMePage = ({ user }) => {
       <div id="about-me" className="pt-24 text-center">
         {/* Semua teks di dalam div ini akan berwarna hitam */}
         <div className="flex items-center justify-center space-x-4">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-white">
+          <h1 className="text-4xl font-jakarta font-bold tracking-tight sm:text-5xl text-custom-orange">
             About
           </h1>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-orange">
+          <h1 className="text-4xl font-jakarta font-bold tracking-tight sm:text-5xl text-custom-orange">
             Me!!
           </h1>
         </div>
@@ -19,7 +19,7 @@ const BodyAboutMePage = ({ user }) => {
           {/* Kolom pertama kosong */}
         </div>
         <div className="col-span-1 md:col-span-2 flex flex-col items-center justify-center">
-          <p className="font-normal text-custom-orange text-base md:text-xl text-justify leading-relaxed">
+          <p className="font-jakarta text-custom-orange text-base md:text-xl text-justify leading-relaxed">
             Saya Ardon Yunors Tallan, 22 Tahun dari Sidoarjo. Saya adalah
             programmer dan merupakan lulusan S1 Sistem Informasi Bisnis
             Universitas Kristen Petra. Seorang yang teliti dan terampil dalam

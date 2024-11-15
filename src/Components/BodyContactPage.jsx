@@ -49,10 +49,10 @@ const BodyContactPage = () => {
     <div className="text-black pb-20">
       <div id="contact" className="pt-24 text-center"></div>
       <div className="flex items-center justify-center space-x-2">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-white">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-blue">
           Contact
         </h1>
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-orange">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-white">
           Me!!
         </h1>
       </div>
@@ -64,7 +64,7 @@ const BodyContactPage = () => {
           <div className="sm:col-span-2">
             <label
               htmlFor="name"
-              className="block text-base font-normal leading-6 text-white"
+              className="block text-base font-bold leading-6 text-custom-blue"
             >
               Name
             </label>
@@ -77,14 +77,14 @@ const BodyContactPage = () => {
                 autoComplete="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm"
+                className="block w-full border bg-custom-white border-gray-900 rounded-md shadow-sm px-3 py-2 text-gray-900 placeholder:text-custom-blue focus:ring-2 focus:ring-indigo-600 sm:text-sm"
               />
             </div>
           </div>
           <div className="sm:col-span-2">
             <label
               htmlFor="email"
-              className="block text-base font-normal leading-6 text-white"
+              className="block text-base font-bold leading-6 text-custom-blue"
             >
               Email
             </label>
@@ -97,14 +97,14 @@ const BodyContactPage = () => {
                 autoComplete="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm"
+                className="block w-full border bg-custom-white border-gray-900 rounded-md shadow-sm px-3 py-2 text-gray-900 placeholder:text-custom-blue focus:ring-2 focus:ring-indigo-600 sm:text-sm"
               />
             </div>
           </div>
           <div className="sm:col-span-2">
             <label
               htmlFor="message"
-              className="block text-base font-normal leading-6 text-white"
+              className="block text-base font-bold leading-6 text-custom-blue"
             >
               Message
             </label>
@@ -116,7 +116,7 @@ const BodyContactPage = () => {
                 placeholder="Tuliskan email/no wa kalian diatas"
                 value={formData.message}
                 onChange={handleChange}
-                className="block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 sm:text-sm"
+                className="block w-full border bg-custom-white border-gray-900 rounded-md shadow-sm px-3 py-2 text-gray-900 placeholder:text-custom-blue focus:ring-2 focus:ring-indigo-600 sm:text-sm"
               />
             </div>
           </div>
@@ -124,7 +124,7 @@ const BodyContactPage = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="rounded-md border border-transparent bg-indigo-600 px-3 py-2 text-base font-medium text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-600"
+            className="font-bold rounded-md border border-transparent bg-custom-red px-3 py-2 text-base text-custom-blue shadow-sm ring-1 ring-custom-red hover:bg-custom-red focus:ring-2 focus:ring-custom-red"
           >
             Submit
           </button>

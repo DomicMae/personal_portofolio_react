@@ -12,7 +12,7 @@ const BodyProject = ({ user }) => {
       </div>
 
       <div className="flex items-center justify-center space-x-2 pb-2">
-        <h1 className="text-2xl font-bold tracking-tight sm:text-2xl text-white">
+        <h1 className="text-2xl font-bold tracking-tight sm:text-2xl text-custom-white">
           Check in here
         </h1>
       </div>
