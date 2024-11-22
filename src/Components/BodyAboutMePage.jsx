@@ -36,9 +36,9 @@ const BodyAboutMePage = ({ user }) => {
 
       <div className="flex items-center justify-center relative">
         <h1 className="absolute bottom-5 mb-0 text-5xl font-bold z-10 text-center">
-          <span className="text-white">ARDON</span>
-          <span className="text-custom-orange"> YUNORS </span>
-          <span className="text-white">TALLAN</span>
+          <span className="text-custom-white">ARDON</span>
+          <span className="text-custom-yellow"> YUNORS </span>
+          <span className="text-custom-white">TALLAN</span>
         </h1>
         <img
           src="foto-full.png"

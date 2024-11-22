@@ -12,6 +12,8 @@ module.exports = {
         "custom-black": "#292C35",
         "custom-white": "#92A4B1",
         "custom-yellow": "#DBAE52",
+        "custom-blue-dark": "#1D3557",
+        "custom-brown": "#6D482E",
       },
       fontFamily: {
         jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
