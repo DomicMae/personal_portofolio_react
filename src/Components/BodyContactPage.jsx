@@ -49,11 +49,8 @@ const BodyContactPage = () => {
     <div className="text-black pb-20">
       <div id="contact" className="pt-24 text-center"></div>
       <div className="flex items-center justify-center space-x-2">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-blue">
-          Contact
-        </h1>
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-white">
-          Me!!
+          Contact Me!!
         </h1>
       </div>
       <form
