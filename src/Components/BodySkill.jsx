@@ -272,13 +272,13 @@ const BodySkill = ({ user }) => {
       </div>
       <div className="flex flex-col items-center justify-center space-y-2 pt-12">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="font-bold text-custom-white text-2xl sm:text-4xl text-center pt-6 pb-3">
+          <h1 className="font-bold text-custom-white text-2xl sm:text-4xl text-center pt-6 pb-6">
             GitHub Contributions
           </h1>
           <img
             src="Github Progress.png"
             alt="GitHub"
-            className="rounded-md w-82 h-82 sm:w-82 sm:h-82"
+            className="rounded-md w-full max-w-[350px] sm:max-w-[700px] lg:max-w-[1200px] xl:max-w-[1800px] h-auto"
           />
         </div>
       </div>
