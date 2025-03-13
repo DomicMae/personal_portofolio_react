@@ -1,7 +1,7 @@
 import { ArrowDown } from "lucide-react";
 import "../input.css";
 
-const BodyProject = ({ user }) => {
+const BodyProject = () => {
   return (
     <div className="text-black pb-20">
       <div id="project" className="pt-24 text-center"></div>
@@ -54,12 +54,63 @@ const BodyProject = ({ user }) => {
         {/* First Card */}
         <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
           {/* First Image Card */}
-          <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 shadow-xl">
+          <div className="card rounded-3xl bg-custom-red w-full md:w-1/2 shadow-xl">
+            <figure className="px-10 pt-10 pb-5 flex justify-center">
+              <img
+                src="/WebsiteEZCook.svg" // Make sure the preview image is in the public folder
+                alt="WebsiteEZCook"
+                className="border-4 border-custom-yellow w-auto h-auto rounded-md"
+              />
+            </figure>
+            <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+              <h2 className="card-title text-3xl font-bold pb-3">
+                UI/UX Project EZ Cook
+              </h2>
+              <p>
+                EZ Cook adalah proyek dari techno entrepreneurship. Proyek ini
+                bertujuan menyediakan makanan sehat untuk orang sibuk yang
+                kurang memperhatikan kandungan gizi makanannya. Saya terlibat
+                dalam pengembangan konsep hingga pengemasan ide agar produk ini
+                relevan dan menarik bagi target pasar.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Second Card */}
+        <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
+          {/* Second Image Card */}
+          <div className="card rounded-3xl bg-custom-red w-full md:w-1/2 shadow-xl">
+            <figure className="px-10 pt-10 pb-5 flex justify-center">
+              <img
+                src="/WebsitePujasera.svg" // Make sure the preview image is in the public folder
+                alt="WebsitePujasera"
+                className="border-4 border-custom-yellow w-auto h-auto rounded-md"
+              />
+            </figure>
+            <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+              <h2 className="card-title text-3xl font-bold pb-3">
+                Project Pujasera
+              </h2>
+              <p>
+                Project Pujasera ini adalah hasil kerja bareng kelompok saya. Di
+                project ini, saya ikut sebagai Back-end. Dimana selama
+                prosesnya, saya berdiskusi bareng teman untuk memastikan agar
+                sesuai dengan keinginan klien.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Third Card */}
+        <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
+          {/* Third Image Card */}
+          <div className="card rounded-3xl bg-custom-red w-full md:w-1/2 shadow-xl">
             <figure className="px-10 pt-10 pb-5 flex justify-center">
               <img
                 src="/WebsiteKomplain.svg" // Make sure the preview image is in the public folder
                 alt="WebsiteKomplain"
-                className="border border-green-600 w-auto h-auto rounded-md"
+                className="border-4 border-custom-yellow w-auto h-auto rounded-md"
               />
             </figure>
             <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
@@ -80,41 +131,15 @@ const BodyProject = ({ user }) => {
           </div>
         </div>
 
-        {/* First Card */}
+        {/* Fourth Card */}
         <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
-          {/* First Image Card */}
-          <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 shadow-xl">
-            <figure className="px-10 pt-10 pb-5 flex justify-center">
-              <img
-                src="/WebsiteEZCook.svg" // Make sure the preview image is in the public folder
-                alt="WebsiteEZCook"
-                className="border border-custom-yellow w-auto h-auto rounded-md"
-              />
-            </figure>
-            <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
-              <h2 className="card-title text-3xl font-bold pb-3">
-                UI/UX Project EZ Cook
-              </h2>
-              <p>
-                EZ Cook adalah proyek dari techno entrepreneurship. Proyek ini
-                bertujuan menyediakan makanan sehat untuk orang sibuk yang
-                kurang memperhatikan kandungan gizi makanannya. Saya terlibat
-                dalam pengembangan konsep hingga pengemasan ide agar produk ini
-                relevan dan menarik bagi target pasar.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* First Card */}
-        <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
-          {/* First Image Card */}
-          <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 shadow-xl">
+          {/* Fourth Image Card */}
+          <div className="card rounded-3xl bg-custom-red w-full md:w-1/2 shadow-xl">
             <figure className="px-10 pt-10 pb-5 flex justify-center">
               <img
                 src="/CompanyProfileDafco.svg" // Make sure the preview image is in the public folder
                 alt="CompanyProfileDafco"
-                className="border border-custom-brown w-auto h-auto rounded-md"
+                className="border-4 border-custom-yellow w-auto h-auto rounded-md"
               />
             </figure>
             <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
@@ -133,15 +158,15 @@ const BodyProject = ({ user }) => {
           </div>
         </div>
 
-        {/* First Card */}
+        {/* Fifth Card */}
         <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
-          {/* First Image Card */}
-          <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 shadow-xl">
+          {/* Fifth Image Card */}
+          <div className="card rounded-3xl bg-custom-red w-full md:w-1/2 shadow-xl">
             <figure className="px-10 pt-10 pb-5 flex justify-center">
               <img
                 src="/WebsiteNation.svg" // Make sure the preview image is in the public folder
                 alt="WebsiteNation"
-                className="border border-custom-brown w-auto h-auto rounded-md"
+                className="border-4 border-custom-yellow w-auto h-auto rounded-md"
               />
             </figure>
             <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
@@ -154,6 +179,31 @@ const BodyProject = ({ user }) => {
                 tampilan dapat lebih menarik dan enak dilihat oleh orang-orang.
                 Selama prosesnya, saya berdiskusi bareng teman untuk memastikan
                 desainnya sesuai dengan konsep yang diinginkan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Sixth Card */}
+        <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
+          {/* Sixth Image Card */}
+          <div className="card rounded-3xl bg-custom-red w-full md:w-1/2 shadow-xl">
+            <figure className="px-10 pt-10 pb-5 flex justify-center">
+              <img
+                src="/MobileProject.svg" // Make sure the preview image is in the public folder
+                alt="MobileProject"
+                className="border-4 border-custom-yellow w-auto h-auto rounded-md"
+              />
+            </figure>
+            <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+              <h2 className="card-title text-3xl font-bold pb-3">
+                Project Mobile Rumah Sakit
+              </h2>
+              <p>
+                Project ini adalah hasil kerja saya. Di project ini, saya ikut
+                sebagai Android Apps. Dimana selama prosesnya, saya berdiskusi
+                bareng backend untuk memastikan agar data atau error bisa
+                dihandle sesuai dengan keinginan klien.
               </p>
             </div>
           </div>
