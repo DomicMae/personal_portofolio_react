@@ -87,7 +87,7 @@ export default function HomePage(props) {
             <p>© {new Date().getFullYear()} Ardon - All right reserved</p>
           </aside>
           <nav>
-            <div className="flex justify-center pt-8 gap-x-4">
+            <div className="flex justify-center pt-5 gap-x-16">
               <a
                 href="https://www.linkedin.com/in/ardonyunors/"
                 target="_blank"
