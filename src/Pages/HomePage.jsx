@@ -82,43 +82,64 @@ export default function HomePage(props) {
           <BodyContactPage />
         </section>
 
-        <footer className="footer footer-center bg-black text-base-content text-white text-center pt-8 pb-8 justify-center">
-          <aside>
-            <p>© {new Date().getFullYear()} Ardon - All right reserved</p>
-          </aside>
-          <nav>
-            <div className="flex justify-center pt-5 gap-x-16">
-              <a
-                href="https://www.linkedin.com/in/ardonyunors/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button>
-                  <Linkedin className="w-10 h-10" />
-                </button>
-              </a>
-
-              <a
-                href="https://www.instagram.com/ardonyunors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button>
-                  <Instagram className="w-10 h-10" />
-                </button>
-              </a>
-
-              <a
-                href="https://github.com/DomicMae"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button>
-                  <Github className="w-10 h-10" />
-                </button>
-              </a>
+        <footer className="footer bg-black text-white text-center pt-8 pb-8 flex flex-col md:flex-row justify-between px-6 md:px-12">
+          {/* aside 1 */}
+          <aside className="hidden md:flex flex-row items-start space-x-10">
+            <a href="/" className="flex ">
+              <img src="/favicon.png" alt="Logo" className="h-24" />
+            </a>
+            <div className="flex flex-col text-left">
+              <h2 className="text-lg font-semibold">YATA</h2>
+              <p className="text-sm max-w-md text-gray-400">
+                "Yatta" (やった) berarti "Aku berhasil!" atau "Yeay!", yang
+                sering digunakan untuk mengekspresikan kegembiraan atau
+                pencapaian.
+              </p>
             </div>
-          </nav>
+          </aside>
+
+          {/* aside 2 */}
+          <aside className="flex flex-row items-center justify-center md:justify-end w-full md:w-auto space-x-6">
+            <div className="flex flex-col">
+              <p className="mb-5">
+                © {new Date().getFullYear()} Ardon - All rights reserved
+              </p>
+
+              <nav className="">
+                <div className="flex justify-center gap-x-8">
+                  <a
+                    href="https://www.linkedin.com/in/ardonyunors/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button>
+                      <Linkedin className="w-10 h-10" />
+                    </button>
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/ardonyunors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button>
+                      <Instagram className="w-10 h-10" />
+                    </button>
+                  </a>
+
+                  <a
+                    href="https://github.com/DomicMae"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button>
+                      <Github className="w-10 h-10" />
+                    </button>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </aside>
         </footer>
       </main>
     </div>
