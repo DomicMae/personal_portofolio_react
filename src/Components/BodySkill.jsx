@@ -131,8 +131,8 @@ const BodySkill = ({ user }) => {
             </motion.h1>
             <div className="w-full flex justify-center px-4 sm:px-6 md:px-8">
               <img
-                src="Github Progress.svg"
-                alt="GitHub Contributions"
+                src="/github-progress.svg"
+                alt="github-progress"
                 loading="eager"
                 className="
         rounded-md

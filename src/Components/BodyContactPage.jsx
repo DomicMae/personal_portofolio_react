@@ -73,7 +73,7 @@ const BodyContactPage = () => {
             {
               label: "LinkedIn",
               href: "https://www.linkedin.com/in/ardonyunors/",
-              img: "/linkedin.svg",
+              img: "/Linkedin.svg",
             },
             {
               label: "Instagram",
