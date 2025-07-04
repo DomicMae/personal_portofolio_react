@@ -87,6 +87,7 @@ const BodyContactPage = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               whileHover={{ rotate: 1.5, scale: 1.05 }}
+              loading="eager"
               className="bg-neutral-900 p-6 rounded-xl shadow-lg hover:shadow-orange-500/30 transition-all"
             >
               <a

@@ -133,6 +133,7 @@ const BodySkill = ({ user }) => {
               <img
                 src="Github Progress.svg"
                 alt="GitHub Contributions"
+                loading="eager"
                 className="
         rounded-md
         w-full
