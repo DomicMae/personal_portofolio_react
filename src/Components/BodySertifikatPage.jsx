@@ -1,13 +1,19 @@
 import "../input.css";
+import { motion } from "framer-motion";
 
 const BodySertifikatPage = ({ user }) => {
   return (
     <div className="text-black pb-20">
       <div id="sertifikat" className="pt-24 text-center">
         <div className="flex items-center justify-center space-x-2 pb-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-white">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl font-bold tracking-tight sm:text-5xl text-custom-white"
+          >
             Sertifikat
-          </h1>
+          </motion.h1>
         </div>
       </div>
 
@@ -25,7 +31,7 @@ const BodySertifikatPage = ({ user }) => {
           <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
             <h2 className="card-title text-3xl font-bold pb-3">Coursera</h2>
             <p>Dasar-Dasar Dukungan Teknis</p>
-            <p>2022</p>
+            <p>Dec 2022</p>
           </div>
         </div>
 
@@ -41,7 +47,7 @@ const BodySertifikatPage = ({ user }) => {
           <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
             <h2 className="card-title text-3xl font-bold pb-3">Coursera</h2>
             <p>Seluk Beluk Jaringan Komputer</p>
-            <p>2022</p>
+            <p>Dec 2022</p>
           </div>
         </div>
       </div>
@@ -60,7 +66,7 @@ const BodySertifikatPage = ({ user }) => {
           <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
             <h2 className="card-title text-3xl font-bold pb-3">Coursera</h2>
             <p>Sistem Operasi dan Anda: Menjadi Pengguna yang Berdaya</p>
-            <p>2022</p>
+            <p>Dec 2022</p>
           </div>
         </div>
 
@@ -76,12 +82,47 @@ const BodySertifikatPage = ({ user }) => {
           <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
             <h2 className="card-title text-3xl font-bold pb-3">Coursera</h2>
             <p>Administrasi Sistem dan Layanan Infrastruktur TI</p>
-            <p>2023</p>
+            <p>Jan 2023</p>
           </div>
         </div>
       </div>
 
       {/* Third Card */}
+      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
+        {/* First Image Card */}
+        <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
+          <figure className="px-10 pt-10 pb-5">
+            <img
+              src="/Sertifikat Coursera_IT Support.jpg"
+              alt="Sertifikat Coursera_IT Support"
+              className="border border-gray-300 w-full rounded-md"
+            />
+          </figure>
+          <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+            <h2 className="card-title text-3xl font-bold pb-3">Coursera</h2>
+            <p>IT Support</p>
+            <p>Jan 2023</p>
+          </div>
+        </div>
+
+        {/* Second Image Card */}
+        <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
+          <figure className="px-10 pt-10 pb-5">
+            <img
+              src="/Sertifikat-baparekraf-developer-day-2023.jpg" // Make sure the preview image is in the public folder
+              alt="Sertifikat-baparekraf-developer-day-2023"
+              className="border border-gray-300 w-full rounded-md "
+            />
+          </figure>
+          <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+            <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
+            <p>Baparekraf Developer Day 2023</p>
+            <p>Mar 2023</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Fourth Card */}
       <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
         {/* First Image Card */}
         <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
@@ -95,30 +136,11 @@ const BodySertifikatPage = ({ user }) => {
           <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
             <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
             <p>Belajar Dasar AWS Cloud</p>
-            <p>2023</p>
+            <p>Apr 2023</p>
           </div>
         </div>
 
         {/* Second Image Card */}
-        <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
-          <figure className="px-10 pt-10 pb-5">
-            <img
-              src="/Sertifikat_Dicoding_DataScience.jpg"
-              alt="Sertifikat_Dicoding_DataScience"
-              className="border border-gray-300 w-full rounded-md"
-            />
-          </figure>
-          <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
-            <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
-            <p>Belajar Dasar Data Science</p>
-            <p>2024</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Fourth Card */}
-      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
-        {/* First Image Card */}
         <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
@@ -130,11 +152,14 @@ const BodySertifikatPage = ({ user }) => {
           <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
             <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
             <p>Belajar Dasar Pemrograman JavaScript</p>
-            <p>2023</p>
+            <p>May 2023</p>
           </div>
         </div>
+      </div>
 
-        {/* Second Image Card */}
+      {/* Fifth Card */}
+      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
+        {/* First Image Card */}
         <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
@@ -146,14 +171,11 @@ const BodySertifikatPage = ({ user }) => {
           <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
             <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
             <p>Belajar Dasar Manajemen Proyek</p>
-            <p>2023</p>
+            <p>Dec 2023</p>
           </div>
         </div>
-      </div>
 
-      {/* Fifth Card */}
-      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
-        {/* First Image Card */}
+        {/* Second Image Card */}
         <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
@@ -165,7 +187,26 @@ const BodySertifikatPage = ({ user }) => {
           <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
             <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
             <p>Belajar Dasar Structured Query Language (SQL)</p>
-            <p>2024</p>
+            <p>Jan 2024</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Sixth Card */}
+      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
+        {/* First Image Card */}
+        <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
+          <figure className="px-10 pt-10 pb-5">
+            <img
+              src="/Sertifikat_Dicoding_DataScience.jpg"
+              alt="Sertifikat_Dicoding_DataScience"
+              className="border border-gray-300 w-full rounded-md"
+            />
+          </figure>
+          <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+            <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
+            <p>Belajar Dasar Data Science</p>
+            <p>Jan 2024</p>
           </div>
         </div>
 
@@ -173,15 +214,120 @@ const BodySertifikatPage = ({ user }) => {
         <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
           <figure className="px-10 pt-10 pb-5">
             <img
-              src="/Sertifikat-baparekraf-developer-day-2023.jpg"
-              alt="Sertifikat-baparekraf-developer-day-2023"
+              src="/Sertifikat_Dicoding_Memulai Pemrograman dengan Python.jpg"
+              alt="Sertifikat_Dicoding_Memulai Pemrograman dengan Python"
               className="border border-gray-300 w-full rounded-md"
             />
           </figure>
           <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
             <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
-            <p>Belajar Dasar Structured Query Language (SQL)</p>
-            <p>2023</p>
+            <p>Memulai Pemrograman dengan Python</p>
+            <p>Mar 2025</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Seventh Card */}
+      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
+        {/* First Image Card */}
+        <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
+          <figure className="px-10 pt-10 pb-5">
+            <img
+              src="/Sertifikat_Dicoding_Belajar Dasar Visualisasi Data.jpg" // Make sure the preview image is in the public folder
+              alt="Sertifikat_Dicoding_Belajar Dasar Visualisasi Data"
+              className="border border-gray-300 w-full rounded-md "
+            />
+          </figure>
+          <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+            <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
+            <p>Belajar Dasar Visualisasi Data</p>
+            <p>Apr 2025</p>
+          </div>
+        </div>
+
+        {/* Second Image Card */}
+        <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
+          <figure className="px-10 pt-10 pb-5">
+            <img
+              src="/Sertifikat_Dicoding_AI Praktis untuk Produktivitas.jpg" // Make sure the preview image is in the public folder
+              alt="Sertifikat_Dicoding_AI Praktis untuk Produktivitas"
+              className="border border-gray-300 w-full rounded-md "
+            />
+          </figure>
+          <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+            <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
+            <p>AI Praktis untuk Produktivitas</p>
+            <p>May 2025</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Eight Card */}
+      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
+        {/* First Image Card */}
+        <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
+          <figure className="px-10 pt-10 pb-5">
+            <img
+              src="/Sertifikat_Dicoding_Belajar Back-End Pemula dengan JavaScript.jpg"
+              alt="Sertifikat_Dicoding_Belajar Back-End Pemula dengan JavaScript"
+              className="border border-gray-300 w-full rounded-md"
+            />
+          </figure>
+          <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+            <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
+            <p>Belajar Back-End Pemula dengan JavaScript</p>
+            <p>May 2025</p>
+          </div>
+        </div>
+
+        {/* Second Image Card */}
+        <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
+          <figure className="px-10 pt-10 pb-5">
+            <img
+              src="/Sertifikat_Dicoding_Belajar Penggunaan Generative AI.jpg"
+              alt="Sertifikat_Dicoding_Belajar Penggunaan Generative AI"
+              className="border border-gray-300 w-full rounded-md"
+            />
+          </figure>
+          <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+            <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
+            <p>Belajar Penggunaan Generative AI</p>
+            <p>Mei 2025</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Nineth Card */}
+      <div className="flex flex-wrap justify-center gap-10 px-4 mt-6">
+        {/* First Image Card */}
+        <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
+          <figure className="px-10 pt-10 pb-5">
+            <img
+              src="/Sertifikat_Dicoding_Financial Literacy.jpg"
+              alt="Sertifikat_Dicoding_Financial Literacy"
+              className="border border-gray-300 w-full rounded-md"
+            />
+          </figure>
+          <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+            <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
+            <p>Financial Literacy 101</p>
+            <p>May 2025</p>
+          </div>
+        </div>
+
+        {/* Second Image Card */}
+        <div className="card rounded-3xl bg-custom-black w-full md:w-1/2 lg:w-1/3 shadow-xl">
+          <figure className="px-10 pt-10 pb-5">
+            <img
+              src="/Sertifikat_Dicoding_BelajarMachineLearningPemula.jpg" // Make sure the preview image is in the public folder
+              alt="Sertifikat_Dicoding_BelajarMachineLearningPemula"
+              className="border border-gray-300 w-full rounded-md "
+            />
+          </figure>
+          <div className="card-body text-custom-yellow px-10 pb-5 font-redhat">
+            <h2 className="card-title text-3xl font-bold pb-3">Dicoding</h2>
+            <p>Belajar Machine Learning Pemula</p>
+            <p>Jun 2025</p>
           </div>
         </div>
       </div>
