@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Menu } from "lucide-react"; // You can use any icon library for the hamburger menu
 
 const Navbar = () => {
-  const [isAboutMeVisible, setIsAboutMeVisible] = useState(false);
   const [isSkillsVisible, setIsSkillsVisible] = useState(false);
   const [isProjectVisible, setIsProjectVisible] = useState(false);
   const [isSertifikatVisible, setIsSertifikatVisible] = useState(false);
@@ -15,9 +14,6 @@ const Navbar = () => {
       (entries) => {
         entries.forEach((entry) => {
           switch (entry.target.id) {
-            case "about-me":
-              setIsAboutMeVisible(entry.isIntersecting);
-              break;
             case "skills":
               setIsSkillsVisible(entry.isIntersecting);
               break;
@@ -41,20 +37,17 @@ const Navbar = () => {
       }
     );
 
-    const aboutMeSection = document.getElementById("about-me");
     const skillsSection = document.getElementById("skills");
     const projectSection = document.getElementById("project");
     const sertifikatSection = document.getElementById("sertifikat");
     const contactSection = document.getElementById("contact");
 
-    if (aboutMeSection) observer.observe(aboutMeSection);
     if (skillsSection) observer.observe(skillsSection);
     if (projectSection) observer.observe(projectSection);
     if (sertifikatSection) observer.observe(sertifikatSection);
     if (contactSection) observer.observe(contactSection);
 
     return () => {
-      if (aboutMeSection) observer.unobserve(aboutMeSection);
       if (skillsSection) observer.unobserve(skillsSection);
       if (projectSection) observer.unobserve(projectSection);
       if (sertifikatSection) observer.unobserve(sertifikatSection);
@@ -94,18 +87,6 @@ const Navbar = () => {
           </button>
           <div className="items-center justify-center col-span-1 hidden md:flex">
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-custom-red dark:border-gray-700">
-              <li>
-                <button
-                  onClick={() => handleScrollTo("about-me")}
-                  className={`transition ease-in-out delay-150 duration-300 block py-2 px-3 md:p-0 font-bold ${
-                    isAboutMeVisible
-                      ? "text-custom-blue -translate-y-1 scale-110"
-                      : "text-custom-white"
-                  }`}
-                >
-                  About Me
-                </button>
-              </li>
               <li>
                 <button
                   onClick={() => handleScrollTo("skills")}
@@ -175,16 +156,6 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-custom-red dark:bg-custom-red">
           <ul className="flex flex-col space-y-4 p-4">
-            <li>
-              <button
-                onClick={() => handleScrollTo("about-me")}
-                className={`block w-full text-left px-1 ${
-                  isAboutMeVisible ? "text-custom-blue" : "text-custom-white"
-                }`}
-              >
-                About Me
-              </button>
-            </li>
             <li>
               <button
                 onClick={() => handleScrollTo("skills")}
