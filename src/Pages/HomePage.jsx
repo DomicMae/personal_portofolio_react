@@ -79,14 +79,11 @@ export default function HomePage(props) {
             <BodyAboutMePage />
           </section>
 
-          <section id="skills" className="w-full min-h-screen">
+          {/* <section id="skills" className="w-full min-h-screen">
             <BodySkill />
-          </section>
+          </section> */}
 
-          <section
-            id="project"
-            className="w-full min-h-screen py-10 bg-custom-black"
-          >
+          <section id="project" className="w-full min-h-screen bg-custom-black">
             <BodyProject />
           </section>
 
